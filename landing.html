@@ -1,0 +1,1641 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css" />  
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="position: relative;">
+        <nav class="navbar navbar-expand-lg netflix-navbar netflix-padding-left netflix-padding-right">
+            <div class="container-fluid">
+                <div class="netflix-row">
+                    <div class="left d-flex align-items-center">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="./img/logo-Netflix.png" alt="">
+                        </a>
+                        <div class="netflix-nav">
+                            <section>
+                                <button>Home</button>
+                                <button>TV Shows</button>
+                                <button>Movies</button>
+                                <button>News & Popular</button>
+                                <button>My List</button>
+                            </section>
+                        </div>
+                        <div class="netflix-dropdown-box dropdown">
+                            <button class="netflix-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Browse
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Home</a></li>
+                                <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                                <li><a class="dropdown-item" href="#">Movies</a></li>
+                                <li><a class="dropdown-item" href="#">News & Popular</a></li>
+                                <li><a class="dropdown-item" href="#">My List</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right d-flex align-items-center">
+                        <i class="bi bi-search"></i>
+                        <i class="bi bi-bell-fill"></i>
+                        <section class="netflix-profile">
+                            <img style="max-width: 40px; border-radius: 50%;" src="./img/landing/account.jpg" alt="">
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- /header -->
+
+        <!-- video -->
+        <div class="">
+        <section class="netflix-home-video">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <video id="homeVideo" src="./img/video/video2.mp4" autoplay muted loop playsinline></video>
+            <div class="content">
+                <section class="left">
+                    <img style="max-width: 300px; min-width: 120px; padding: 0;" src="./img/landing/JuJingYi.png" alt="">
+
+                    <div class="d-flex mt-2">
+                        <button id="playBtn" class="btn btn-light m-2"> 
+                            <i id="playIcon" class="fa-solid fa-play" style="color: black; padding: 0%;"></i> Play Now
+                        </button>
+                        <button class="btn btn-secondary m-2">
+                            <i class="bi bi-info-circle" style=" padding: 0%;"></i> 
+                            <a href="https://www.facebook.com/CucTinhYVNFC" style="text-decoration: none; color: aliceblue;">More Info</a>
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <script>
+                const video = document.getElementById("homeVideo");
+                const playBtn = document.getElementById("playBtn");
+                const playIcon = document.getElementById("playIcon");
+
+                playBtn.addEventListener("click", () => {
+                    if (video.muted) {
+                        video.muted = false;
+                        playIcon.classList.remove("fa-play");
+                        playIcon.classList.add("fa-pause");
+                    } 
+                    else {
+                        video.muted = true;
+                        playIcon.classList.remove("fa-pause");
+                        playIcon.classList.add("fa-play");
+                    }
+                    video.play();
+                });
+            </script>
+        </section>
+</div>
+        <!-- video -->
+
+        <!-- sliders -->
+        <div class="slider-box">
+            <!-- Trending -->
+            <div class="container-fluid slider">
+                <section class="d-flex justify-content-between margin-right">
+                    <p class="text-white"> <b>Trending</b> </p>
+                    <div class="">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+                        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </section>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner" style="position: relative; overflow: visible;">
+                        <div class="carousel-item active">
+                            <section class="d-flex" style="">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (1).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (2).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (3).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (4).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (5).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (6).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="d-flex">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (7).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (8).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (9).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (10).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (11).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (12).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="d-flex">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (13).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (14).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (15).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (16).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (17).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/trending/Anh (18).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Drama -->
+            <div class="container-fluid  slide2">
+                <section class="d-flex justify-content-between margin-right margin-title">
+                    <p class="text-white text-bol"> <b>Drama</b> </p>
+                    <div class="">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+                        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </section>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner" style="position: relative; overflow: visible;">
+                        <div class="carousel-item active">
+                            <section class="d-flex">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (1).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (2).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (3).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (4).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (5).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (6).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="d-flex ">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (7).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (8).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (9).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (10).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (11).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (12).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="d-flex ">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (13).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (14).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (15).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (16).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (17).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="./img/landing/drama/Anh (18).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- Romance -->
+            <div class="container-fluid  slide3">
+                <section class="d-flex justify-content-between margin-right margin-title2">
+                    <p class="text-white"> <b>Romance</b> </p>
+                    <div class="">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+                        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </section>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner" style="position: relative; overflow: visible;">
+                        <div class="carousel-item active">
+                            <section class="d-flex ">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (1).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (2).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (3).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (4).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (5).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (6).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="d-flex">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (7).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (8).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (9).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (10).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (11).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (12).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="d-flex ">
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (13).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (14).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (15).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (16).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (17).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img style="max-width: 250px; max-height: 200px;" src="img/landing/romance/Anh (18).jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <section class="d-flex justify-content-between">
+                                            <div>
+                                                <i class="bi bi-play-circle-fill card-icon"></i>
+                                                <i class="bi bi-plus-circle card-icon"></i>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-arrow-down-circle card-icon"></i>
+                                            </div>
+                                        </section>
+                                        <section class="d-flex align-items-center justify-content-between">
+                                            <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% match
+                                            </p>
+                                            <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                                                class="border netflix-card-text p-1 text-white">HD</span>
+
+                                        </section>
+                                        <span class="netflix-card-text text-white">Provocative • Psychological •
+                                            Thriller</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- sliders-end -->
+
+
+        <!-- footer  -->
+        <div class="container footer">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <ul>
+                                <li>Audio and Subtitle</li>
+                                <li>Media Center</li>
+                                <li>Privacy</li>
+                                <li>Contact Us</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li>Audio description</li>
+                                <li>Investor Relation</li>
+                                <li>Terms and Conditions</li>
+                                <li>Legal Notices</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li>Help Center</li>
+                                <li>Jobs</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li>Gift card</li>
+                                <li>Subscription</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="footer-copyright pt-5 pb-2 font-weight-lighter text-muted">
+                    <i class="fa-regular fa-copyright"></i>Dr.Gifter
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"> </script>
+    <script src="../Netflix-with-Bootstrap-master/js/main.js"></script>
+</body>
+</html>
